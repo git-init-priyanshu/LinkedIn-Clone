@@ -126,15 +126,13 @@ const Hero = styled.div`
     width: 700px;
     height: 670px;
     position: absolute;
-    bottom: -2px;
+    bottom: 120px;
     right: -150px;
     @media (max-width: 768px) {
       top: 230px;
       width: initial;
       position: initial;
       height: initial;
-
-      
     }
   }
 `;
@@ -145,6 +143,9 @@ const Form = styled.div`
   width: 408px;
   @media (max-width: 768px) {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 const Google = styled.button`
@@ -161,7 +162,7 @@ const Google = styled.button`
   font-size: 20px;
   color: rgba(0,0,0,0.6);
   &:hover{
-    background-color: rgba(207,207,207,0,25);
+    background-color: rgba(207,207,207,0.25);
     color: rgba(0,0,0,0.75);
   }
 `;
