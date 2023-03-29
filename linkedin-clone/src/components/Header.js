@@ -88,9 +88,12 @@ const Container = styled.div`
 const Content = styled.div`
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  margin: 0px auto;
   min-height: 100%;
   max-width: 1240px;
+  @media (max-width:768px){
+    margin-top: 5px;
+  }
 `;
 
 const Logo = styled.span`
@@ -102,15 +105,19 @@ const Search = styled.div`
   opacity: 1;
   flex-grow: 1;
   position: relative;
+  
   &>div{
-    max-width: 280px;
+    max-width: 100%;
+    @media (max-width: 768px){
+      margin-right: 80px;
+    }
     input{
       border: none;
       box-shadow: none;
       background-color: #eef3f8;
       border-radius: 2px;
       color: rgba(0,0,0,0.9);
-      width: 218px;
+      width: 65%;
       padding: 0 8px 0 40px;
       line-height: 1.75;
       font-weight: 400;
@@ -118,7 +125,12 @@ const Search = styled.div`
       height: 34px;
       border-color: #dce6f1;
       vertical-align: text-top;
+
+      @media (max-width: 768px){
+        width: 100%;
+      }
     }
+    
   }
 `;
 
@@ -139,6 +151,7 @@ const SearchIcon = styled.div`
 const Nav = styled.nav`
   margin-left: auto;
   display: block;
+  padding-right: 24px;
   @media (max-width: 768px) {
     position: fixed;
     left: 0;
